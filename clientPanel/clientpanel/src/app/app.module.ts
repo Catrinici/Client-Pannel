@@ -21,6 +21,8 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
+import { SettingsService } from './services/settings.service';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
@@ -49,7 +51,9 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 		FlashMessagesModule.forRoot()
 	],
 	providers: [
-		ClientService
+		ClientService,
+		AuthService,
+		SettingsService
 	],
 	bootstrap: [AppComponent]
 })
